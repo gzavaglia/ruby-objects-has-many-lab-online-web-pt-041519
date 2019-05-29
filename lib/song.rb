@@ -9,16 +9,16 @@ class Song
   end
   
   def self.all 
-    @@all.each do |song|
-      song.name
-    end
+    @@all
   end
   
   def artist_name
-    if self.artist == nil
-      return nil
-    end
-    self.artist.name
+    # if self.artist == nil
+    #   return nil
+    # end
+    # self.artist.name
+    # !!self.artist ? self.artist.name : nil
+    return self.artist && self.artist.name
   end
 
 end #end song 
